@@ -64,6 +64,7 @@ if platform.system() == 'Darwin':
         raise SystemExit(f'Could not locate library {library}')    
     extra_link_args = []
 elif platform.system() == 'Linux':
+    print("sono in Linux")
     include_dirs = [
         '/usr/local/include/osrm',
         '/usr/include/boost',
@@ -100,6 +101,7 @@ elif platform.system() == 'Linux':
             raise SystemExit(f'Could not locate library {library}')
 else:
     raise SystemExit(f'Platform {platform.system()} is currently unsupported')
+print(f'Include dirs: {include_dirs}, library dirs: {library_dirs}, libraries: {libraries}, ')
 
 ext = cythonize(
     [
@@ -110,7 +112,7 @@ ext = cythonize(
             library_dirs=library_dirs,
             libraries=libraries,
             language='c++',
-            extra_compile_args=["-std=c++17"],
+            extra_compile_args=["-std=c++17 -Wall -Wfatal-errors -fPIC"],
             extra_link_args=extra_link_args
         )
     ],
