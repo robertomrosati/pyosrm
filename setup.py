@@ -114,7 +114,7 @@ ext = cythonize(
             library_dirs=library_dirs,
             libraries=libraries,
             language='c++',
-            extra_compile_args=["-std=c++17 -Wall -Wfatal-errors"],
+            extra_compile_args=["-std=c++17","-Wall","-Wfatal-errors"],
             extra_link_args=extra_link_args
         )
     ],
