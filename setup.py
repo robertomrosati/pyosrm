@@ -68,11 +68,12 @@ elif platform.system() == 'Linux':
     include_dirs = [
         '/usr/local/include/osrm',
         '/usr/include/boost',
-        '/usr/local/include/boost'
-        '/usr/local/lib/R/site-library/BH/include/boost'
-        '/usr/include/'
+        '/usr/local/include/boost',
+        '/usr/local/lib/R/site-library/BH/include/boost',
+        '/usr/include/',
+        '/usr/include/boost/units'
     ]
-    library_dirs = [ '/usr/local/lib', '/usr/lib/x86_64-linux-gnu',  ]
+    library_dirs = [ '/usr/local/lib', '/usr/lib/x86_64-linux-gnu' ]
     libraries = [
         "osrm",
         "boost_system",
