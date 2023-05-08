@@ -79,10 +79,6 @@ elif platform.system() == 'Linux':
         "boost_filesystem",
         "boost_iostreams",
         "boost_thread",
-        "libboost_system",
-        "libboost_filesystem",
-        "libboost_iostreams",
-        "libboost_thread",
     ]
     extra_link_args = ["-lrt"]
     for i, library in enumerate(libraries):
