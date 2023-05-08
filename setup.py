@@ -103,6 +103,8 @@ else:
     raise SystemExit(f'Platform {platform.system()} is currently unsupported')
 print(f'Include dirs: {include_dirs}, library dirs: {library_dirs}, libraries: {libraries}, ')
 
+libraries = [    "osrm",    "boost_system",    "boost_filesystem",    "boost_iostreams",    "boost_thread",    "boost_chrono",    "boost_atomic",    "boost_date_time",    "boost_regex",]
+
 ext = cythonize(
     [
         Extension(
