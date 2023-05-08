@@ -69,14 +69,20 @@ elif platform.system() == 'Linux':
         '/usr/local/include/osrm',
         '/usr/include/boost',
         '/usr/local/include/boost'
+        '/usr/local/lib/R/site-library/BH/include/boost'
+        '/usr/include/'
     ]
-    library_dirs = [ '/usr/local/lib', '/usr/lib/x86_64-linux-gnu' ]
+    library_dirs = [ '/usr/local/lib', '/usr/lib/x86_64-linux-gnu',  ]
     libraries = [
         "osrm",
         "boost_system",
         "boost_filesystem",
         "boost_iostreams",
         "boost_thread",
+        "libboost_system",
+        "libboost_filesystem",
+        "libboost_iostreams",
+        "libboost_thread",
     ]
     extra_link_args = ["-lrt"]
     for i, library in enumerate(libraries):
